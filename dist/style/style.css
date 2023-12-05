@@ -26,8 +26,103 @@
   font-family: "maven";
   src: url(/dist/assets/webfonts/maven_Pro/MavenPro-VariableFont_wght.ttf) format("truetype-variations");
   font-variation-settings: "wght" 400, "wght" 900;
+  font-weight: 400 900;
   font-style: normal;
 }
+@font-face {
+  font-family: "codeconf";
+  src: url(/dist/assets/webfonts/codeconf-all/fonts/codeconf.ttf) format("truetype-variations");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*=" icon"]::before, [class^=icon]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  transform: translatey(var(--offset-icon));
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-burger::before {
+  content: "\e93e";
+}
+
+.icon-schedule::before {
+  content: "\e93f";
+}
+
+.icon-loop::before {
+  content: "\e940";
+}
+
+.icon-contact::before {
+  content: "\e941";
+}
+
+.icon-event::before {
+  content: "\e942";
+}
+
+.icon-home::before {
+  content: "\e943";
+}
+
+.icon-card::before {
+  content: "\e944";
+}
+
+.icon-paypal::before {
+  content: "\e945";
+}
+
+.icon-tw::before {
+  content: "\e946";
+}
+
+.icon-slack::before {
+  content: "\e947";
+}
+
+.icon-heart_full::before {
+  content: "\e948";
+}
+
+.icon-heart_line::before {
+  content: "\e949";
+}
+
+.icon-square_full::before {
+  content: "\e94a";
+}
+
+.icon-square_line::before {
+  content: "\e94b";
+}
+
+.icon-spade_full::before {
+  content: "\e94c";
+}
+
+.icon-spade_line::before {
+  content: "\e94d";
+}
+
+.icon-clover_full::before {
+  content: "\e94e";
+}
+
+.icon-clover_line::before {
+  content: "\e94f";
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -164,11 +259,11 @@ section {
 .speakers .card--inactive p {
   color: rgb(140, 134, 130);
 }
-.speakers .card--active {
+.speakers .card {
   background-color: rgb(255, 239, 230);
   padding: 2rem;
 }
-.speakers .card--active h2 {
+.speakers .card__name {
   padding: 10px;
   margin-bottom: 40px;
   color: #4B436A;
@@ -179,7 +274,7 @@ section {
   line-height: normal;
   letter-spacing: -0.02906rem;
 }
-.speakers .card--active h3 {
+.speakers .card__subTitle {
   font-family: "league";
   font-size: 1.8rem;
   font-weight: 200;
@@ -187,7 +282,7 @@ section {
   letter-spacing: -0.04rem;
   margin-bottom: 10px;
 }
-.speakers .card--active p {
+.speakers .card p {
   color: #353237;
   font-family: "League";
   font-size: 1rem;
@@ -196,13 +291,13 @@ section {
   margin-top: 20px;
   align-items: center;
 }
-.speakers .card--active button {
+.speakers .card a {
   color: rgb(247, 77, 28);
   width: 2.5 rem;
   border: 1px solid rgb(247, 77, 28);
 }
 
-.speakers__infos {
+footer {
   display: grid;
   justify-content: space-between;
   grid-template-columns: 0.5fr 3fr 3fr;
@@ -210,7 +305,10 @@ section {
   align-self: center;
   border: 10px solid goldenrod;
 }
-.speakers__infos button {
+footer a {
+  display: block;
+  border: 1px solid rgb(247, 77, 28);
+  text-decoration: none;
   padding: 10px;
   font-family: "league";
   border-radius: 5rem;
@@ -225,10 +323,16 @@ section {
 
 .speakers__list {
   list-style: none;
-  height: 299px;
   z-index: 3;
 }
 
-.form {
+.form-speaker {
+  margin-left: 50px;
+  margin-right: 50px;
   margin-top: 20px;
+  font-family: "league";
+  text-align: center;
+}
+.form-speaker__title {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

@@ -182,12 +182,13 @@ section {
     }
   }
 
-  .card--active {
+  .card {
     background-color: $color_card_active;
+    //background-color: rgb(0, 255, 55);
     padding: 2rem;
 
 
-    h2 {
+    &__name {
       padding: 10px;
       margin-bottom: 40px;
       //border: 1px solid #000;
@@ -202,7 +203,7 @@ section {
       letter-spacing: -0.02906rem;
     }
 
-    h3 {
+    &__subTitle {
       //padding: 10px;
 
       font-family: 'league';
@@ -227,7 +228,7 @@ section {
 
     }
 
-    button {
+    a {
       color: $color_secondary;
       width: 2.5 rem;
       border: 1px solid $color_secondary;
@@ -237,7 +238,7 @@ section {
 
 }
 
-.speakers__infos {
+footer {
   display: grid;
   //display: flex;
   justify-content: space-between;
@@ -248,9 +249,12 @@ section {
 
 
 
-  button {
+  a {
     //background-color: #F74D1C;
     //flex-grow: 2;
+    display: block;
+    border: 1px solid $color_secondary;
+    text-decoration: none;
     padding: 10px;
     font-family: 'league';
     border-radius: 5rem;
@@ -271,11 +275,20 @@ section {
 
 .speakers__list {
   list-style: none;
-  height: 299px;
+  //height: 299px;
   z-index: 3;
 }
 
-.form {
+.form-speaker{
+  margin-left: 50px;
+  margin-right: 50px;
   margin-top: 20px;
+  font-family: 'league';
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
   
 }

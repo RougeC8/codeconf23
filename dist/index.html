@@ -71,25 +71,23 @@
             </div>
           </div>
           <!-- actif -->
-          <div class="speakers__card card--active">
-            <div class="speakers__card-up">
-              <h2 class="speakers__name">
+          <div class="card card--active">
+            <div class="card__up">
+              <h2 class="card__name">
                 Chris <span class="speakers__last-name">Coyier</span>
               </h2>
-              <h3>Going Offline</h3>
+              <h3 class="card__subTitle">Going Offline</h3>
               <p class="speakers__description">You can re-visit my Web site even when you’re not connected to the
                 Internet</p>
-              <div class="speakers__infos">
+              
+                <footer class="card__footer">
+ 
+                  <time class="card__time_start icon-schedule">10:00</time>
+                  <span>R1</span>
+                  <a href="">ABOUT</a>
+                </footer>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.5 0C13.1943 0 17 3.80568 17 8.5C17 13.1943 13.1943 17 8.5 17C3.80568 17 0 13.1943 0 8.5C0 3.80568 3.80568 0 8.5 0ZM8.5 1.54545C4.65911 1.54545 1.54545 4.65911 1.54545 8.5C1.54545 12.3409 4.65911 15.4545 8.5 15.4545C12.3409 15.4545 15.4545 12.3409 15.4545 8.5C15.4545 4.65911 12.3409 1.54545 8.5 1.54545ZM9.11741 8.44823L9.11818 4.25H7.57273V9.32373L12.4741 12.2647L13.2693 10.9395L9.11741 8.44823Z"
-                    fill="#353237" />
-                </svg>
-                <p class="time">10h15 <span>| R2</span></p>
-
-                <button> ABOUT</button>
-              </div>
+                
             </div>
 
           </div>
@@ -281,25 +279,26 @@
       <!-- section formulaire -->
 
    
-    <section class="form">
-      <h2 class="form__title">
+    <section class="form-speaker">
+      <h2 class="form-speaker__title">
         Become a speaker
       </h2>
-      <h3>
+      <h3 class="form-speaker__sub-title">
         Do you have a topic that you like?
       </h3>
       <p>
         Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords
       </p>
-      <form action="" method="get" class="form__become-speakers">
+      <form class="form-speaker__become-speakers">
         <label for="fname"> Name:</label><br>
         <input type="text" id="fname" name="fname"required><br>
         <label for="mail">Mail:</label><br>
         <input type="email" id="mail" name="mail">
-        <label for="keywords"> Keywords</label><br><p></p>
+        <label for="keywords"> Keywords</label><p>[separate by comma]</p><br>
         <input type="text" id="keywords" name="keywords" required><br>
         
-
+        <label for="message">Short details<</label><br>
+        <textarea id="contact_form_message" name="contact_form[message]" required="required" ></textarea><br>
 
         <input type="submit" value="Submit">
       </form>
