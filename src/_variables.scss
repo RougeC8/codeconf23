@@ -1,0 +1,13 @@
+$color_primary: rgba(95, 75, 232, 1);
+$color_secondary: rgba(247, 77, 28, 1);
+$color_card_active: rgba(255, 239, 230, 1);
+$color_grey:rgba(140, 134, 130, 1);
+$color_comp_primary: complement($color_primary);
+$color_light_primary: lighten($color_primary, 70);
+$color_dark_primary: darken($color_primary, 30);
+$body_color: #f9f9f9; 
+$header_color: rgba(53, 50, 55, 1);
+$breakpoint_mobile: 800px;
+$breakpoint_tablet: 1024px;
+$fontsize_h1: 51px;
+

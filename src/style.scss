@@ -1,0 +1,266 @@
+@import "_variables";
+@import "_mixins";
+@import "_header";
+@import "_font";
+@import "_reset";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: auto;
+  //margin-left: 20px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+  //border: 10px solid #000;
+
+}
+
+.logo {
+  width: 150px;
+  margin: 20px;
+  //border: 10px solid #ba1414;
+}
+
+.menu_mobile {
+  &_icons {
+    width: 21px;
+    height: 21px;
+  }
+
+  //margin-left: 4rem;
+  //border: 1px solid #000;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  //border: 1px solid #000;
+}
+
+
+body {
+  background-color: $body_color;
+}
+
+//// le hero////
+
+
+.hero {
+  //border: 10px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3fr);
+  justify-content: space-between;
+  height: auto;
+  background-color: $color_primary;
+  //border: 10px solid greenyellow;
+  //overflow: hidden;
+  z-index: 2;
+  border: 5px solid $color_primary;
+
+  img {
+    display: flex;
+    justify-content: center;
+    margin-top: -5rem;
+    margin-bottom: 0rem;
+    margin-left: (rem);
+    width: 65%;
+
+    align-items: end;
+  }
+
+  &__title {
+
+    margin-left: 2rem;
+    margin-top: -6rem;
+    color: $body_color;
+    font-family: 'Museo';
+    font-family: Museo;
+    font-size: $fontsize_h1;
+    font-style: bold;
+    line-height: 45px;
+    /* 88.235% */
+    letter-spacing: -0.988px;
+    font-weight: 900;
+    display: grid;
+  }
+
+  &__pattern {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    //border: 1px solid #000;
+  }
+
+  &__pattern-left {
+    //justify-content: start;
+    background-image: url(/dist/assets/images/elts/pattern-stripes-left.png);
+    background-size: cover;
+    height: 2.5rem;
+    width: 40%;
+  }
+
+  &__pattern-right {
+    background-image: url(/dist/assets/images/elts/pattern-stripes-right.png);
+    background-size: cover;
+    height: 2.5rem;
+    width: 40%;
+    //z-index: 1;
+  }
+}
+
+/// SPEAKERS
+//
+
+.speakers {
+  background-color: $body_color;
+  //padding: 2rem;
+
+
+  &__header {
+    //border: 10px solid #000;
+    padding: 2rem;
+    display: flex;
+    justify-content: startv;
+    align-items: center;
+
+  }
+
+  &__title-section {
+    font-family: 'museo';
+    color: #4B436A;
+    //font-size: 0.875rem;
+    font-style: bold;
+    font-weight: 900;
+    line-height: 1rem;
+    letter-spacing: 0.01906rem;
+    padding-left: 20px;
+    border-left: 1px solid #000;
+
+  }
+
+  img {
+    padding: 10px;
+  }
+
+  .card--inactive {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 10px solid greenyellow;
+    font-family: 'museo';
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    img {
+      //border: 10px solid #000;
+      height: 8rem;
+      border-radius: 50%;
+    }
+
+    h2 {
+
+      display: grid;
+      gap: 5px;
+      font-weight: bolder;
+      //border: 1px solid #000;
+      grid-template-columns: repeat(1fr);
+      font-size: 2rem;
+    }
+
+    p {
+      color: $color_grey;
+    }
+  }
+
+  .card--active {
+    background-color: $color_card_active;
+    padding: 2rem;
+
+
+    h2 {
+      padding: 10px;
+      margin-bottom: 40px;
+      border: 1px solid #000;
+
+      color: #4B436A;
+
+      font-family: Museo;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.02906rem;
+    }
+
+    h3 {
+      //padding: 10px;
+
+      font-family: 'league';
+      font-size: 1.8rem;
+      font-weight: 200;
+      line-height: 1.8125rem;
+      letter-spacing: -0.04rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      //display: flex;
+      font-family: 'League';
+      border: 1px solid #000;
+      font-size: 1.3rem;
+      font-style: light;
+      font-weight: 200;
+      line-height: 137%;
+      margin-top: 20px;
+      align-items: center;
+
+    }
+
+    button {
+      color: $color_secondary;
+      width: 2.5 rem;
+      border: 1px solid $color_secondary;
+    }
+
+  }
+
+}
+
+.speakers__infos {
+  //display: grid;
+  display: flex;
+  justify-content: space-between;
+  //grid-template-columns: 0.5fr 2fr 3fr;
+  align-items: center;
+  ///align-self: center;
+  border: 10px solid goldenrod;
+
+
+
+  button {
+    //background-color: #F74D1C;
+    flex-grow: 2;
+    padding: 20px;
+    font-family: 'league';
+    border-radius: 5rem;
+    color: #F74D1C;
+    width: 10rem;
+    //height: 2.5rem;
+    flex-shrink: 0;
+    text-align: end;
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    //flex-grow: 1;
+    //width: 400px;
+  }
+
+
+}
+
+.speakers__list {
+  list-style: none;
+  height: 299px;
+  z-index: 3;
+}
