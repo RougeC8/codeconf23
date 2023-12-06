@@ -289,19 +289,27 @@
       <p>
         Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords
       </p>
-      <form class="form-speaker__become-speakers">
-        <label for="fname"> Name:</label><br>
-        <input type="text" id="fname" name="fname"required><br>
-        <label for="mail">Mail:</label><br>
-        <input type="email" id="mail" name="mail">
-        <label for="keywords"> Keywords</label><p>[separate by comma]</p><br>
-        <input type="text" id="keywords" name="keywords" required><br>
+      
+      <form action="/submit_topic" method="post" class="form-speaker__become-speakers">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
         
-        <label for="message">Short details<</label><br>
-        <textarea id="contact_form_message" name="contact_form[message]" required="required" ></textarea><br>
-
-        <input type="submit" value="Submit">
+        <label for="email">Mail *</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="subject">Your Subject *</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="keywords">Keywords</label>
+        <input type="text" id="keywords" name="keywords" placeholder="separate by comma">
+        
+        <label for="details">Short details *</label>
+        <textarea id="details" name="details" required></textarea>
+        
+        <input type="submit" value="SEND YOUR SUBJECT">
       </form>
+      
+      <p>or just participate to the present event ...</p>
       
     </section>
 
