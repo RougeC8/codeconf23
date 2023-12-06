@@ -1,0 +1,65 @@
+
+//// le hero////
+
+
+.hero {
+  //border: 10px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3fr);
+  justify-content: space-between;
+  height: auto;
+  background-color: $color_primary;
+  //border: 10px solid greenyellow;
+  //overflow: hidden;
+  z-index: 2;
+  border: 5px solid $color_primary;
+
+  img {
+    display: flex;
+    justify-content: center;
+    margin-top: -5rem;
+    margin-bottom: 0rem;
+    margin-left: (rem);
+    width: 65%;
+
+    align-items: end;
+  }
+
+  &__title {
+
+    margin-left: 2rem;
+    margin-top: -6rem;
+    color: $body_color;
+    font-family: 'Museo500';
+    font-size: $fontsize_h1;
+    font-style: bold;
+    line-height: 45px;
+    /* 88.235% */
+    letter-spacing: -0.988px;
+    font-weight: 900;
+    display: grid;
+  }
+
+  &__pattern {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    //border: 1px solid #000;
+  }
+
+  &__pattern-left {
+    //justify-content: start;
+    background-image: url(/dist/assets/images/elts/pattern-stripes-left.png);
+    background-size: cover;
+    height: 2.5rem;
+    width: 40%;
+  }
+
+  &__pattern-right {
+    background-image: url(/dist/assets/images/elts/pattern-stripes-right.png);
+    background-size: cover;
+    height: 2.5rem;
+    width: 40%;
+    //z-index: 1;
+  }
+}

@@ -1,3 +1,15 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  transition: all 0.4s;
+}
+
 @font-face {
   font-family: "league";
   src: url(/dist/assets/webfonts/leaguespartan/LeagueSpartanVariable.woff2) format("woff2-variations");
@@ -123,18 +135,6 @@
   content: "\e94f";
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  transition: all 0.4s;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -158,14 +158,6 @@
 .menu_mobile_icons {
   width: 21px;
   height: 21px;
-}
-
-body {
-  background-color: #f9f9f9;
-}
-
-section {
-  display: grid;
 }
 
 .hero {
@@ -217,64 +209,48 @@ section {
   width: 40%;
 }
 
-.speakers {
-  background-color: #f9f9f9;
-}
-.speakers__header {
-  padding-left: 2rem;
-  padding-top: 2rem;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-.speakers__title-section {
-  font-family: "museo300";
-  color: #4B436A;
-  font-style: bold;
-  font-weight: 900;
-  line-height: 1rem;
-  letter-spacing: 0.01906rem;
-  padding-left: 20px;
-}
-.speakers img {
-  padding: 10px;
-}
-.speakers .card--inactive {
+.card--inactive {
   padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "museo300";
+  border: 10px solid greenyellow;
+  font-family: "museo";
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.speakers .card--inactive img {
+.card--inactive img {
   height: 8rem;
   border-radius: 50%;
 }
-.speakers .card--inactive h2 {
+.card--inactive h2 {
   display: grid;
+  gap: 5px;
+  font-weight: bolder;
   grid-template-columns: repeat(1fr);
   font-size: 2rem;
-  margin-bottom: 10px;
 }
-.speakers .card--inactive p {
+.card--inactive p {
   color: rgb(140, 134, 130);
 }
-.speakers .card {
+
+.card--active {
   background-color: rgb(255, 239, 230);
   padding: 2rem;
 }
-.speakers .card__name {
+.card--active h2 {
   padding: 10px;
   margin-bottom: 40px;
+  border: 1px solid #000;
   color: #4B436A;
-  font-family: Museo300;
+  font-family: Museo;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.02906rem;
 }
-.speakers .card__subTitle {
+.card--active h3 {
   font-family: "league";
   font-size: 1.8rem;
   font-weight: 200;
@@ -282,34 +258,54 @@ section {
   letter-spacing: -0.04rem;
   margin-bottom: 10px;
 }
-.speakers .card p {
-  color: #353237;
+.card--active p {
   font-family: "League";
-  font-size: 1rem;
+  border: 1px solid #000;
+  font-size: 1.3rem;
+  font-style: light;
   font-weight: 200;
   line-height: 137%;
   margin-top: 20px;
   align-items: center;
 }
-.speakers .card a {
+.card--active button {
   color: rgb(247, 77, 28);
   width: 2.5 rem;
   border: 1px solid rgb(247, 77, 28);
 }
 
-footer {
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: 0.5fr 3fr 3fr;
+.speakers {
+  background-color: #f9f9f9;
+}
+.speakers__header {
+  padding: 2rem;
+  display: flex;
+  justify-content: startv;
   align-items: center;
-  align-self: center;
+}
+.speakers__title-section {
+  font-family: "museo";
+  color: #4B436A;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 1rem;
+  letter-spacing: 0.01906rem;
+  padding-left: 20px;
+  border-left: 1px solid #000;
+}
+.speakers img {
+  padding: 10px;
+}
+
+.speakers__infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 10px solid goldenrod;
 }
-footer a {
-  display: block;
-  border: 1px solid rgb(247, 77, 28);
-  text-decoration: none;
-  padding: 10px;
+.speakers__infos button {
+  flex-grow: 2;
+  padding: 20px;
   font-family: "league";
   border-radius: 5rem;
   color: #F74D1C;
@@ -326,13 +322,10 @@ footer a {
   z-index: 3;
 }
 
-.form-speaker {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 20px;
-  font-family: "league";
-  text-align: center;
+body {
+  background-color: #f9f9f9;
 }
-.form-speaker__title {
-  text-transform: uppercase;
+
+section {
+  display: grid;
 }/*# sourceMappingURL=style.css.map */

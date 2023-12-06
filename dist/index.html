@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeConf 2023 Toto</title>
   <link rel="stylesheet" href="/dist/style/style.min.css">
+  <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -19,6 +21,8 @@
     </div>
 
     <div class="menu_mobile">
+      <a href="" class="icon-burger"></a>
+      <a href="" class="icon-schedule"></a>
       <img class="icons programme" src="/dist/assets/images/icones/calendar.png" alt="calendar">
       <img class="icons burger_menu" src="/dist/assets/images/icones/menu_btn.png" alt="burger menu">
     </div>
@@ -79,15 +83,15 @@
               <h3 class="card__subTitle">Going Offline</h3>
               <p class="speakers__description">You can re-visit my Web site even when you’re not connected to the
                 Internet</p>
-              
-                <footer class="card__footer">
- 
-                  <time class="card__time_start icon-schedule">10:00</time>
-                  <span>R1</span>
-                  <a href="">ABOUT</a>
-                </footer>
 
-                
+              <footer class="card__footer">
+
+                <time class="card__time_start icon-schedule">10:00</time>
+                <span>R1</span>
+                <a href="">ABOUT</a>
+              </footer>
+
+
             </div>
 
           </div>
@@ -273,12 +277,13 @@
             </div>
           </div>
         </li>
-      </ul> </section>
+      </ul>
+    </section>
 
 
-      <!-- section formulaire -->
+    <!-- section formulaire -->
 
-   
+
     <section class="form-speaker">
       <h2 class="form-speaker__title">
         Become a speaker
@@ -287,47 +292,86 @@
         Do you have a topic that you like?
       </h3>
       <p>
-        Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords
+        Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related
+        keywords
       </p>
-      
+
       <form action="/submit_topic" method="post" class="form-speaker__become-speakers">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required>
-        
+
         <label for="email">Mail *</label>
         <input type="email" id="email" name="email" required>
-        
+
         <label for="subject">Your Subject *</label>
         <input type="text" id="subject" name="subject" required>
-        
+
         <label for="keywords">Keywords</label>
         <input type="text" id="keywords" name="keywords" placeholder="separate by comma">
-        
+
         <label for="details">Short details *</label>
         <textarea id="details" name="details" required></textarea>
-        
+
         <input type="submit" value="SEND YOUR SUBJECT">
       </form>
-      
+
       <p>or just participate to the present event ...</p>
-      
+
+    </section>
+    <!-- section get ticket -->
+    <section class="get-tickets">
+      <button class="ticket-button__button" href="">get ticket</button>
+      <a href="" class="icon-paypal"></a>
+      <a href="" class="icon-card"></a>
+      <div class="price">$199 USD</div>
     </section>
 
-
-
-    <div class="get_ticket"></div>
-
-
-
-
-
   </main>
-  <footer>
+  <!-- section footer-->
+  <footer class="footer-page">
+    <header>
+      <h2 class="footer-page__titre">The Las Vegas Convention Center</h2>
+      
+      <img src="/dist/assets/images/icones/Shape.png" alt="icon-location">
+      <address class="footer-page__adresse icone-">
+        3150 Paradise Rd, Las Vegas, NV 89109
+      </address>
+    </header>
 
-  </footer>
+    <main>
+      <section class="footer-page__description">
+        <p>The Las Vegas Convention Center (LVCC), located adjacent to the Las Vegas Strip, encompasses approximately 3.2
+          million square feet with exhibit space of 2 million square feet and meeting space of nearly 250,000 square feet.
+        </p>
+        <p class="footer-page__description__help">Helpdesk Call-center +1 702-892-0711 <span>(speaker's support)</span></p>
+      </section>
+     
+    <section class="footer-page__logos">
+        <picture>
+          <img src="/dist/assets/images/logos/cisco.svg" alt="logo cisco">
+          <img src="/dist/assets/images/logos/amazon_s3.svg" alt="logo amazon_s3">
+          <img src="/dist/assets/images/logos/nick.svg" alt="logo nick">
+          <img src="/dist/assets/images/logos/meetup.svg" alt="logo meetup">
+          <img src="/dist/assets/images/logos/stripe.svg" alt="logo stripe">
+          <img src="/dist/assets/images/logos/mailchimp.svg" alt="logo mailchimp">
+        </picture><!-- Ajoutez ici les logos des sponsors avec des balises img -->
+    </section>
 
+    <section class="footer-page__follow-us">
 
+    
+        <h3 class="footer-page__h3">Follow US</h3>
 
+        <a href="">#codeconf2022</a>
+        <a href="">@codeconf2022</a>
+      
+    </section class=footer-page>
+    <section class="footer-page__copyright">
+      <span>organised by WebeesMeetups.com</span>
+      <span>copyright 2022</span>
+    </section>
+
+    </footer>
 
 
 

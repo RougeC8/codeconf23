@@ -1,0 +1,84 @@
+
+.card--inactive {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 10px solid greenyellow;
+  font-family: 'museo';
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  img {
+    //border: 10px solid #000;
+    height: 8rem;
+    border-radius: 50%;
+  }
+
+  h2 {
+
+    display: grid;
+    gap: 5px;
+    font-weight: bolder;
+    //border: 1px solid #000;
+    grid-template-columns: repeat(1fr);
+    font-size: 2rem;
+  }
+
+  p {
+    color: $color_grey;
+  }
+}
+
+.card--active {
+  background-color: $color_card_active;
+  padding: 2rem;
+
+
+  h2 {
+    padding: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #000;
+
+    color: #4B436A;
+
+    font-family: Museo;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.02906rem;
+  }
+
+  h3 {
+    //padding: 10px;
+
+    font-family: 'league';
+    font-size: 1.8rem;
+    font-weight: 200;
+    line-height: 1.8125rem;
+    letter-spacing: -0.04rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    //display: flex;
+    font-family: 'League';
+    border: 1px solid #000;
+    font-size: 1.3rem;
+    font-style: light;
+    font-weight: 200;
+    line-height: 137%;
+    margin-top: 20px;
+    align-items: center;
+
+  }
+
+  button {
+    color: $color_secondary;
+    width: 2.5 rem;
+    border: 1px solid $color_secondary;
+  }
+
+}
+

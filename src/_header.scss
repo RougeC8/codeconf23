@@ -1,0 +1,34 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: auto;
+  //margin-left: 20px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+  //border: 10px solid #000;
+
+}
+
+.logo {
+  width: 150px;
+  margin: 20px;
+  //border: 10px solid #ba1414;
+}
+
+.menu_mobile {
+
+  &_icons {
+    width: 21px;
+    height: 21px;
+  }
+
+  //margin-left: 4rem;
+  //border: 1px solid #000;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  //border: 1px solid #000;
+}
