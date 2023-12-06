@@ -5,10 +5,15 @@ $color_grey:rgba(140, 134, 130, 1);
 $color_comp_primary: complement($color_primary);
 $color_light_primary: lighten($color_primary, 70);
 $color_dark_primary: darken($color_primary, 30);
+$color_light_secondary: lighten($color_secondary, 70);
+$color_dark_secondary: darken($color_secondary, 30);
 $body_color: #f9f9f9; 
 $header_color: rgba(53, 50, 55, 1);
 $breakpoint_mobile: 800px;
 $breakpoint_tablet: 1024px;
 $color_text_black: #353237;
 $fontsize_h1: 51px;
+$radiuscercle: 50%;
+$offset-icon: 1px;
+$dropshadow: rgba(247, 77, 28, 0.14);
 

@@ -69,3 +69,15 @@
 .speakers__list {
   list-style: none;
   z-index: 3;}
+
+
+  .speaker {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  speakersContainer {
+    background-color: red;
+    /* styles pour l'en-tête du speaker */
+  }

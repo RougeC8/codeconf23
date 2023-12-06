@@ -1,6 +1,7 @@
 @import "_reset";
 @import "_font";
 @import "_variables";
+@import "_layout";
 @import "_mixins";
 @import "_header";
 @import "_hero";
@@ -10,10 +11,3 @@
 @import "_ticket";
 @import "_footer";
 
-// mettre layout  
-body {
-  background-color: $body_color;
-}
-section {
-  display: grid;
-}
