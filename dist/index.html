@@ -23,8 +23,7 @@
     <div class="menu_mobile">
       <a href="" class="icon-burger"></a>
       <a href="" class="icon-schedule"></a>
-      <img class="icons programme" src="/dist/assets/images/icones/calendar.png" alt="calendar">
-      <img class="icons burger_menu" src="/dist/assets/images/icones/menu_btn.png" alt="burger menu">
+     
     </div>
 
   </header>
@@ -291,12 +290,12 @@
       <h3 class="form-speaker__sub-title">
         Do you have a topic that you like?
       </h3>
-      <p>
+      <p class="form-speaker__text">
         Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related
         keywords
       </p>
 
-      <form action="/submit_topic" method="post" class="form-speaker__become-speakers">
+      <form class="form-speaker__become-speakers">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required>
 
@@ -306,11 +305,11 @@
         <label for="subject">Your Subject *</label>
         <input type="text" id="subject" name="subject" required>
 
-        <label for="keywords">Keywords</label>
-        <input type="text" id="keywords" name="keywords" placeholder="separate by comma">
+        <label for="keywords">Keywords</label> <span>[separate by comma]</span>
+        <input type="text" id="keywords" name="keywords" required >
 
         <label for="details">Short details *</label>
-        <textarea id="details" name="details" required></textarea>
+        <textarea id="details" name="details"  placeholder="Short details *" required></textarea>
 
         <input type="submit" value="SEND YOUR SUBJECT">
       </form>

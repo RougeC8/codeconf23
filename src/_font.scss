@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'league';
   src: url(/dist/assets/webfonts/leaguespartan/LeagueSpartanVariable.woff2) format('woff2-variations');
+  font-variation-settings: 'wght'100, 'wght'900;
+  font-weight: 100 900;
   font-weight: normal;
   font-style: normal;
 }
@@ -41,6 +43,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 [class*=' icon']::before, [class^='icon']::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icon' !important;
