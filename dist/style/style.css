@@ -45,7 +45,7 @@
 }
 @font-face {
   font-family: "codeconf";
-  src: url(/dist/assets/webfonts/codeconf-all/fonts/codeconf.ttf) format("truetype-variations");
+  src: url("../assets/webfonts/codeconf-all/fonts/codeconf.ttf") format("truetype-variations");
   font-weight: normal;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -53,7 +53,7 @@
 }
 [class*=" icon"]::before, [class^=icon]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icon" !important;
+  font-family: "codeconf" !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
