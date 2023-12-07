@@ -194,6 +194,7 @@ function createSpeakerCard(speaker) {
 
   const time = document.createElement('time');
   time.classList.add('speaker__time');
+  time.classList.add('icon-schedule');
   time.textContent = speaker.time;
   footer.appendChild(time);
 

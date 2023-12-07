@@ -18,10 +18,15 @@
 
 .menu_mobile {
 
+
+  a {
+    text-decoration: none;
+    color: $color_text_black;
+  }
+
   &_icons {
     width: 21px;
     height: 21px;
-    text-decoration: none;
   }
 
   //margin-left: 4rem;
