@@ -1,11 +1,13 @@
  .ticket {
 
    background-color: transparent;
-   border: 10px solid #000;
+   //border: 10px solid #000;
+   margin-bottom: -2.5rem;
    display: grid;
    //padding: auto;
    justify-content: center;
    align-items: center;
+   z-index: 2;
 
 
    &__container {
@@ -23,8 +25,8 @@
 
      box-shadow: 0px -1px 0px 20px rgba(238, 231, 224, 0.07), 0px 1px 13px 24px $dropshadow;
 
-     height: 2rem;
-     width: 15rem;
+     height: auto;
+     width: auto;
    }
 
    &__invit {
@@ -37,6 +39,7 @@
      font-weight: 400;
      line-height: 2.125rem;
      letter-spacing: -0.02906rem;
+     margin-bottom: 2rem;
 
    }
 
@@ -51,6 +54,9 @@
      line-height: normal;
      letter-spacing: -0.03025rem;
      text-decoration: none;
+     
+     padding: 10px;
+
    }
 
    &__price {
@@ -63,6 +69,13 @@
      line-height: normal;
      letter-spacing: -0.01694rem;
 
+   }
+   a {
+    text-decoration: none;
+    //margin: 1rem;
+    padding: .5 rem;
+    //margin-top: 1px;
+    align-items: center;
    }
 
 

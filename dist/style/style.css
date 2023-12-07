@@ -659,10 +659,11 @@ section {
 
 .ticket {
   background-color: transparent;
-  border: 10px solid #000;
+  margin-bottom: -2.5rem;
   display: grid;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 .ticket__container {
   border: 1px solid rgb(247, 77, 28);
@@ -674,8 +675,8 @@ section {
   text-decoration: none;
   background-color: #F74D1C;
   box-shadow: 0px -1px 0px 20px rgba(238, 231, 224, 0.07), 0px 1px 13px 24px rgba(247, 77, 28, 0.14);
-  height: 2rem;
-  width: 15rem;
+  height: auto;
+  width: auto;
 }
 .ticket__invit {
   text-align: center;
@@ -686,6 +687,7 @@ section {
   font-weight: 400;
   line-height: 2.125rem;
   letter-spacing: -0.02906rem;
+  margin-bottom: 2rem;
 }
 .ticket__button {
   color: #f9f9f9;
@@ -696,6 +698,7 @@ section {
   line-height: normal;
   letter-spacing: -0.03025rem;
   text-decoration: none;
+  padding: 10px;
 }
 .ticket__price {
   font-family: "maven";
@@ -707,11 +710,17 @@ section {
   line-height: normal;
   letter-spacing: -0.01694rem;
 }
+.ticket a {
+  text-decoration: none;
+  padding: 0.5 rem;
+  align-items: center;
+}
 
 .footer-page {
   background-color: black;
   color: #f9f9f9;
   padding: 2rem;
+  padding-top: 7rem;
 }
 @media (min-width: 800px) {
   .footer-page {
@@ -730,12 +739,20 @@ section {
 }
 .footer-page__adresse {
   color: #f9f9f9;
+  display: inline-flex;
   font-family: "maven";
   font-size: 0.7rem;
   font-style: bold;
   font-weight: 500;
   line-height: 1.625rem;
   letter-spacing: -0.01819rem;
+  border-radius: 20px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  width: auto;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .footer-page__image {
   display: none;
@@ -745,4 +762,20 @@ section {
     display: block;
     grid-column: 4/-1;
   }
+}
+.footer-page__description {
+  color: #f9f9f9;
+  margin-top: 2rem;
+  font-family: "maven";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6rem;
+  letter-spacing: -0.01819rem;
+}
+.footer-page__logos {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
 }/*# sourceMappingURL=style.css.map */

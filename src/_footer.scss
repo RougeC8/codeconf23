@@ -1,7 +1,9 @@
 .footer-page {
+  
   background-color: black;
   color: $body_color;
   padding: 2rem;
+  padding-top: 7rem;
 
   @media (min-width:$breakpoint_mobile) {
     display: grid;
@@ -25,22 +27,48 @@
 
   &__adresse {
     color: $body_color;
+    display: inline-flex;
     font-family: 'maven';
     font-size: 0.7rem;
     font-style: bold;
     font-weight: 500;
     line-height: 1.625rem;
     letter-spacing: -0.01819rem;
-
-
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    width: auto;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  &__image{
-  display: none;
+
+  &__image {
+    display: none;
     @media (min-width:$breakpoint_mobile) {
-     display: block;
-     grid-column: 4/-1;
+      display: block;
+      grid-column: 4/-1;
+    }
+  }
+
+  &__description{
+    color: $body_color;
+margin-top: 2rem;
+font-family: 'maven';
+font-size: 0.9375rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.6rem;
+letter-spacing: -0.01819rem;
 
   }
 
-}
+  &__logos{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+   
+  }
+
 }
