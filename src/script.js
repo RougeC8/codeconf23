@@ -30,18 +30,104 @@ const speakers = [
     link: '#'
   },
   {
-    name: 'Eric',
-    strongName: 'Meyer',
-    location: 'Cleveland, OH',
-    photoUrl: '../dist/assets/images/orators/eric@3x.jpg',
+    name: 'Shirley',
+    strongName: 'Wu',
+    location: 'San Francisco, CA',
+    photoUrl: '../dist/assets/images/orators/shirley@3x.jpg',
     mainTitle: 'Going Offline',
     mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
     time: '10h15',
     room: 'R2',
     link: '#'
   },
-  
-  // ... autres données de speakers à insérer ...
+  {
+    name: 'Luke',
+    strongName: 'Wroblewski',
+    location: 'San Francisco, CA',
+    photoUrl: '../dist/assets/images/orators/luke@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
+    name: 'Nicolas',
+    strongName: 'Gallagher',
+    location: 'San Francisco, CA',
+    photoUrl: '../dist/assets/images/orators/nico@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
+    name: 'Rachel',
+    strongName: 'Andrew',
+    location: 'Bristol, UK',
+    photoUrl: '../dist/assets/images/orators/rachel@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
+    name: 'Stephen',
+    strongName: 'Hay',
+    location: 'Leeuwarden, NL',
+    photoUrl: '../dist/assets/images/orators/stephen@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
+    name: 'Stephen',
+    strongName: 'Hay',
+    location: 'Leeuwarden, NL',
+    photoUrl: '../dist/assets/images/orators/stephen@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
+    name: 'Paul',
+    strongName: 'Irish',
+    location: 'Palo Alto, CA',
+    photoUrl: '../dist/assets/images/orators/paul@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
+    name: 'Nicole',
+    strongName: 'Sullivan',
+    location: 'San Francisco, CA',
+    photoUrl: '../dist/assets/images/orators/nicole@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
+    name: 'Brad',
+    strongName: 'Frost',
+    location: 'Pittsburgh, PA',
+    photoUrl: '../dist/assets/images/orators/brad@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
 ];
 
 // Fonction pour créer une carte de speaker

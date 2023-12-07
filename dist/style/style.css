@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -169,6 +168,7 @@ section {
 .menu_mobile_icons {
   width: 21px;
   height: 21px;
+  text-decoration: none;
 }
 
 .hero {
@@ -220,64 +220,52 @@ section {
   width: 40%;
 }
 
-.speakers__fil-ariane {
+.speakers {
+  background-color: #f9f9f9;
+  display: grid;
+  padding: 2rem;
+  font-family: "museo500", serif;
+}
+.speakers__header {
+  padding: 2rem;
   display: flex;
   justify-content: start;
-}
-.speakers__fil-ariane a {
-  display: grid;
   align-items: center;
-  margin-left: 2rem;
-  margin-right: 0.2rem;
-  color: rgb(247, 77, 28);
-  text-decoration: none;
-}
-
-.speakers__header {
-  margin-left: 0rem;
   font-family: "museo300", serif;
-  padding-inline-start: 1rem;
+  margin-left: 2rem;
   position: relative;
-  align-items: center;
 }
 .speakers__header::before {
   content: "";
   width: 2px;
   height: 1rem;
-  background: #000;
+  background: #353237;
   position: absolute;
   inset-inline-start: 0;
 }
 
 .all_speakers {
-  padding: 1rem;
-  display: grid;
-  grid-row-gap: 0.2rem;
-}
-@media (min-width: 27rem) {
-  .all_speakers {
-    margin: 2rem;
-    gap: 1.5rem;
-    max-width: 64rem;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  }
+  background-color: goldenrod;
 }
 
 .speaker__container {
   background-color: #f9f9f9;
-  background-color: red;
+  background-color: pink;
   border: 10px solid greenyellow;
+  padding: 1rem;
+  display: grid;
+  grid-row-gap: 0.2rem;
+}
+@media (min-width: 800px) {
+  .speaker__container {
+    display: grid;
+    margin: 2rem;
+    gap: 2rem;
+    max-width: 64rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
 }
 
-.speaker {
-  display: grid;
-  font-family: "museo500";
-  background-color: yellow;
-  font-family: "museo500", serif;
-  padding: 1rem;
-  background-color: yellowgreen;
-  color: #353237;
-}
 @media (min-width: 800px) {
   .speaker {
     box-shadow: none;
@@ -298,17 +286,19 @@ section {
   .speaker:not(.speaker--active) .speaker__photo::before {
     transition: all 0.3s;
     content: "more info";
+    font-family: "league";
     text-transform: uppercase;
     display: grid;
     grid-template-columns: 3rem;
     text-align: center;
-    color: #f9f9f9;
+    color: rgba(247, 77, 28, 0.14);
     align-content: center;
     justify-content: center;
     width: 50%;
     height: 50%;
     border-radius: 50%;
-    box-shadow: 0 0 0 1rem white;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 0.4rem 1rem rgba(247, 77, 28, 0.14);
     background: rgb(247, 77, 28);
     z-index: 1;
     opacity: 0;
@@ -368,12 +358,14 @@ section {
   border-radius: 50%;
 }
 .speaker__main {
+  border: 10px solid #000;
   transition: all 1s;
   color: #353237;
   display: none;
   grid-column-gap: 0.5rem;
 }
 .speaker__main_title {
+  color: #353237;
   font-weight: 500;
   grid-column: 1/-1;
 }
@@ -386,7 +378,336 @@ section {
   color: rgb(140, 134, 130);
   font-family: "league", sans-serif;
   font-weight: 400;
-  border: 10px solid #000;
+}
+.speaker__footer {
+  align-self: center;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.speaker__footer a {
+  margin-inline-start: auto;
+  flex-basis: calc(50vw - 3rem);
+}
+.speaker__footer time {
+  display: inline-flex;
+}
+.speaker__room {
+  display: inline-flex;
+  align-items: center;
+}
+.speaker__room::before {
+  content: "";
+  padding-left: 0.3rem;
+  margin-left: 0.3rem;
+  border-left: 1.5px solid rgba(0, 0, 0, 0.5333333333);
+  height: 0.7rem;
+}
+.speaker__link {
+  border: 2px solid rgb(247, 77, 28);
+  padding: 0.5rem 1.2rem;
+  border-radius: 3rem;
+  font-size: 0.8rem;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(247, 77, 28);
+  font-family: "league", sans-serif;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+  transition: all 0.5s;
+}
+.speaker__link:hover {
+  border: 2px solid rgb(247, 77, 28);
+  background: rgb(247, 77, 28);
+  color: #f9f9f9;
+}
+
+.speaker:not(.speaker--active) .speaker__name,
+.speaker:not(.speaker--active) .speaker__location {
+  padding-left: 0.8rem;
+}
+
+.speaker--active {
+  background: rgba(247, 77, 28, 0.14);
+  display: grid;
+  padding: 1.5rem;
+  grid-template-rows: auto 1fr;
+  padding-bottom: 1.5rem;
+  border-radius: 0.4rem;
+}
+@media (min-width: 800px) {
+  .speaker--active {
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 1rem;
+  }
+}
+.speaker--active .speaker {
+  background-color: #353237;
+  border: 10px solid rgb(140, 134, 130);
+}
+.speaker--active .speaker__room {
+  margin-right: 1rem;
+}
+.speaker--active .speaker__name {
+  color: rgb(247, 77, 28);
+  margin-bottom: 1rem;
+}
+.speaker--active .speaker__name strong {
+  font-weight: inherit;
+}
+.speaker--active .speaker__location {
+  display: none;
+}
+.speaker--active .speaker__main {
+  align-content: start;
+}
+@media (min-width: 800px) {
+  .speaker--active .speaker__main {
+    min-height: 10rem;
+    grid-template: auto auto 1fr auto/1fr 1fr;
+    align-self: end;
+  }
+}
+@media (min-width: 800px) {
+  .speaker--active .speaker__photo {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  .speaker--active .speaker__footer {
+    order: 3;
+  }
+}
+@media (min-width: 800px) {
+  .speaker--active .speaker__link {
+    grid-column: 1/-1;
+  }
+}
+
+.speaker--active .speaker__main {
+  display: grid;
+}
+.speaker--active .speaker__name {
+  display: flex;
+  align-items: center;
+  grid-row: span 2;
+}
+.speaker--active .speaker__name strong {
+  margin-inline-start: 0.3rem;
+}
+.speaker--active .speaker__footer {
+  display: flex;
+}
+
+.speaker__title-section {
+  font-family: "museo300";
+  background-color: red;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.01906rem;
+}
+
+.card--inactive {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 10px solid greenyellow;
+  font-family: "museo";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card--inactive img {
+  height: 8rem;
+  border-radius: 50%;
+}
+.card--inactive h2 {
+  display: grid;
+  gap: 5px;
+  font-weight: bolder;
+  grid-template-columns: repeat(1fr);
+  font-size: 2rem;
+}
+.card--inactive p {
+  color: rgb(140, 134, 130);
+}
+
+.card--active {
+  background-color: rgb(255, 239, 230);
+  padding: 2rem;
+}
+.card--active h2 {
+  padding: 10px;
+  margin-bottom: 40px;
+  border: 1px solid #000;
+  color: #4B436A;
+  font-family: Museo;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.02906rem;
+}
+.card--active h3 {
+  font-family: "league";
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 1.8125rem;
+  letter-spacing: -0.04rem;
+  margin-bottom: 10px;
+}
+.card--active p {
+  font-family: "League";
+  border: 1px solid #000;
+  font-size: 1.3rem;
+  font-style: light;
+  font-weight: 200;
+  line-height: 137%;
+  margin-top: 20px;
+  align-items: center;
+}
+.card--active button {
+  color: rgb(247, 77, 28);
+  width: 2.5 rem;
+  border: 1px solid rgb(247, 77, 28);
+}
+
+.all_speakers {
+  padding: 1rem;
+  display: grid;
+  grid-row-gap: 0.2rem;
+}
+@media (min-width: 27rem) {
+  .all_speakers {
+    margin: 2rem;
+    grid-gap: 1.5rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+
+.speaker {
+  --primary: #E44154;
+  --primaryA: #E44154DD;
+  --primaryB: #E4415488;
+  --primaryC: #E4415411;
+  --w-circle: 50%;
+  font-family: "maven pro", serif;
+  padding: 1rem;
+  color: rgba(0, 0, 0, 0.8666666667);
+  border-radius: 0.5rem;
+}
+@media (min-width: 27rem) {
+  .speaker {
+    box-shadow: none;
+    background: transparent;
+    min-height: 16rem;
+    padding: 0;
+    display: grid;
+    grid-gap: 1rem;
+    align-content: space-between;
+  }
+  .speaker:not(.speaker--active) .speaker__photo {
+    display: grid;
+    grid-template: 1fr/1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .speaker:not(.speaker--active) .speaker__photo::before {
+    transition: all 0.3s;
+    content: "more info";
+    display: grid;
+    grid-template-columns: 3rem;
+    text-align: center;
+    color: #f9f9f9;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0.1 0 1rem rgba(247, 77, 28, 0.14);
+    background: rgb(247, 77, 28);
+    z-index: 1;
+    opacity: 0;
+  }
+  .speaker:not(.speaker--active) .speaker__photo img, .speaker:not(.speaker--active) .speaker__photo::before {
+    grid-area: 1/1/-1/-1;
+  }
+  .speaker:not(.speaker--active):hover .speaker__photo::before {
+    opacity: 1;
+  }
+}
+.speaker h2,
+.speaker p {
+  margin: 0;
+}
+.speaker img {
+  width: 100%;
+}
+.speaker__header {
+  display: grid;
+  grid-template-columns: 1fr 5rem;
+}
+@media (min-width: 27rem) {
+  .speaker__header {
+    grid-template-columns: 1fr;
+  }
+}
+.speaker__name {
+  font-family: "museo", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: grid;
+  align-content: center;
+  line-height: 0.95;
+}
+.speaker__name strong {
+  font-weight: inherit;
+  opacity: 0.75;
+}
+.speaker__photo {
+  align-self: start;
+  overflow: hidden;
+  border-radius: 100rem;
+  grid-column: 2/-1;
+  grid-row: 1/3;
+  display: grid;
+}
+@media (min-width: 27rem) {
+  .speaker__photo {
+    grid-column: 1/-1;
+    border-radius: 3px;
+    margin-bottom: 0.8rem;
+  }
+}
+.speaker__photo img {
+  object-fit: cover;
+}
+.speaker__main {
+  transition: all 1s;
+  color: rgba(0, 0, 0, 0.8666666667);
+  display: none;
+  grid-column-gap: 0.5rem;
+}
+.speaker__main_title {
+  font: 500 1.2rem "maven pro", sans-serif;
+  grid-column: 1/-1;
+}
+.speaker__main_txt {
+  grid-column: 1/-1;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.speaker__location {
+  color: var(--primary);
+  transition: opacity 0.3s;
+  font-family: "league spartan variable", sans-serif;
+  font-variation-settings: "wght" 400;
 }
 .speaker__footer {
   align-self: center;
@@ -459,7 +780,7 @@ section {
   margin-right: 1rem;
 }
 .speaker--active .speaker__name {
-  color: rgb(247, 77, 28);
+  color: var(--primary);
   margin-bottom: 1rem;
 }
 .speaker--active .speaker__name strong {
@@ -471,24 +792,24 @@ section {
 .speaker--active .speaker__main {
   align-content: start;
 }
-@media (min-width: 800px) {
+@media (min-width: 27rem) {
   .speaker--active .speaker__main {
     min-height: 10rem;
     grid-template: auto auto 1fr auto/1fr 1fr;
     align-self: end;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 27rem) {
   .speaker--active .speaker__photo {
     display: none;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 27rem) {
   .speaker--active .speaker__footer {
     order: 3;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 27rem) {
   .speaker--active .speaker__link {
     grid-column: 1/-1;
   }
@@ -507,75 +828,6 @@ section {
 }
 .speaker--active .speaker__footer {
   display: flex;
-}
-
-.speaker__title-section {
-  font-family: "museo300";
-  background-color: red;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.01906rem;
-}
-
-.speakers {
-  background-color: #f9f9f9;
-}
-.speakers__header {
-  padding: 2rem;
-  display: flex;
-  justify-content: startv;
-  align-items: center;
-}
-.speakers__title-section {
-  font-family: "museo";
-  color: #4B436A;
-  font-style: bold;
-  font-weight: 900;
-  line-height: 1rem;
-  letter-spacing: 0.01906rem;
-  padding-left: 20px;
-  border-left: 1px solid #000;
-}
-.speakers img {
-  padding: 10px;
-}
-
-.speakers__infos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 10px solid goldenrod;
-}
-.speakers__infos button {
-  flex-grow: 2;
-  padding: 20px;
-  font-family: "league";
-  border-radius: 5rem;
-  color: #F74D1C;
-  width: 10rem;
-  flex-shrink: 0;
-  text-align: end;
-  font-size: 1rem;
-  font-weight: 200;
-  text-transform: uppercase;
-}
-
-.speakers__list {
-  list-style: none;
-  z-index: 3;
-}
-
-.speaker {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-
-speakersContainer {
-  background-color: red;
-  /* styles pour l'en-tête du speaker */
 }
 
 .form-speaker {
@@ -656,7 +908,6 @@ speakersContainer {
 }
 .form-speaker__submit {
   display: grid;
-  margin-left: 30%;
   width: 20rem;
   height: 3rem;
   text-align: center;
@@ -675,4 +926,55 @@ speakersContainer {
   letter-spacing: -0.02325rem;
   text-transform: uppercase;
   margin-bottom: 3rem;
+}
+
+.ticket {
+  background-color: transparent;
+  border: 10px solid #000;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.ticket__container {
+  border: 1px solid rgb(247, 77, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-radius: 3rem;
+  text-decoration: none;
+  background-color: #F74D1C;
+  box-shadow: 0px -1px 0px 20px rgba(238, 231, 224, 0.07), 0px 1px 13px 24px rgba(247, 77, 28, 0.14);
+  height: 2rem;
+  width: 15rem;
+}
+.ticket__invit {
+  text-align: center;
+  margin-left: auto;
+  font-family: "museo500";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.125rem;
+  letter-spacing: -0.02906rem;
+}
+.ticket__button {
+  color: #f9f9f9;
+  font-family: "maven";
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.03025rem;
+  text-decoration: none;
+}
+.ticket__price {
+  font-family: "maven";
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.01694rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,69 @@
+ .ticket {
+
+   background-color: transparent;
+   border: 10px solid #000;
+   display: grid;
+   //padding: auto;
+   justify-content: center;
+   align-items: center;
+
+
+   &__container {
+
+     border: 1px solid $color_secondary;
+
+     display: flex;
+
+     justify-content: center;
+     align-items: center;
+     align-self: center;
+     border-radius: 3rem;
+     text-decoration: none;
+     background-color: #F74D1C;
+
+     box-shadow: 0px -1px 0px 20px rgba(238, 231, 224, 0.07), 0px 1px 13px 24px $dropshadow;
+
+     height: 2rem;
+     width: 15rem;
+   }
+
+   &__invit {
+
+     text-align: center;
+     margin-left: auto;
+     font-family: 'museo500';
+     font-size: 1.5rem;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 2.125rem;
+     letter-spacing: -0.02906rem;
+
+   }
+
+   &__button {
+
+     color: $body_color;
+
+     font-family: 'maven';
+     font-size: 1.5625rem;
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+     letter-spacing: -0.03025rem;
+     text-decoration: none;
+   }
+
+   &__price {
+     font-family: 'maven';
+     color: $body_color;
+     text-align: center;
+     font-size: 0.875rem;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     letter-spacing: -0.01694rem;
+
+   }
+
+
+ }
