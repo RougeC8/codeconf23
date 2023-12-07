@@ -19,6 +19,29 @@ const speakers = [
     link: '#'
   },
   {
+    name: 'Sara',
+    strongName: 'Soueidan',
+    location: 'Lebano',
+    photoUrl: '../dist/assets/images/orators/sara@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+
+  {
+    name: 'Eric',
+    strongName: 'Meyer',
+    location: 'Cleveland, OH',
+    photoUrl: '../dist/assets/images/orators/eric@3x.jpg',
+    mainTitle: 'Going Offline',
+    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
+    time: '10h15',
+    room: 'R2',
+    link: '#'
+  },
+  {
     name: 'Lea',
     strongName: 'Verou',
     location: 'Cambridge, MA',
@@ -67,17 +90,6 @@ const speakers = [
     strongName: 'Andrew',
     location: 'Bristol, UK',
     photoUrl: '../dist/assets/images/orators/rachel@3x.jpg',
-    mainTitle: 'Going Offline',
-    mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
-    time: '10h15',
-    room: 'R2',
-    link: '#'
-  },
-  {
-    name: 'Stephen',
-    strongName: 'Hay',
-    location: 'Leeuwarden, NL',
-    photoUrl: '../dist/assets/images/orators/stephen@3x.jpg',
     mainTitle: 'Going Offline',
     mainText: 'You can re-visit my Web site even when you’re not connected to the Internet',
     time: '10h15',
