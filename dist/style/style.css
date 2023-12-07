@@ -722,18 +722,8 @@ section {
   padding: 2rem;
   padding-top: 7rem;
 }
-@media (min-width: 800px) {
-  .footer-page {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 3fr 1fr 1fr;
-  }
-  .footer-page__header {
-    grid-column: 1/3;
-  }
-}
 .footer-page__titre {
-  font-family: "maven";
+  font-family: "museo500";
   font-weight: 600;
   color: rgb(75, 232, 210);
 }
@@ -774,8 +764,63 @@ section {
   letter-spacing: -0.01819rem;
 }
 .footer-page__logos {
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  gap: 4rem;
   justify-content: center;
   align-content: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid grey;
+}
+.footer-page__logos picture {
+  display: flex;
+  gap: 3rem;
+}
+.footer-page__h3 {
+  padding-top: 1rem;
+  font-family: "museo500";
+  font-weight: 600;
+  color: rgb(75, 232, 210);
+}
+.footer-page__link {
+  display: flex;
+  gap: 2rem;
+  justify-content: start;
+  border-top: 1px solid 8;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  border-bottom: 1px solid grey;
+}
+.footer-page a {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-family: "museo300";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.01819rem;
+  padding-top: 1rem;
+  align-items: center;
+}
+.footer-page__copyright {
+  color: #f9f9f9;
+  font-family: "museo300";
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.02056rem;
+}
+.footer-page__copyright-infos {
+  color: rgb(219, 201, 183);
+}
+@media (min-width: 800px) {
+  .footer-page {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3fr 1fr 1fr;
+  }
+  .footer-page__header {
+    grid-column: 1/3;
+  }
 }/*# sourceMappingURL=style.css.map */
