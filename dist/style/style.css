@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -265,7 +266,7 @@ section {
   display: grid;
   grid-row-gap: 0.2rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .speaker__container {
     display: grid;
     margin: 0.8rem;
@@ -286,7 +287,7 @@ section {
   display: grid;
   grid-row-gap: 0.2rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .speaker {
     min-height: 1rem;
     padding: 0;
@@ -303,13 +304,13 @@ section {
     position: relative;
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 768px) and (min-width: 768px) {
   .speaker:not(abbr) .speaker__photo img {
     grid-area: 1/1/-1/-1;
     border-radius: 0;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .speaker:not(abbr) .speaker__photo::before {
     transition: all 0.3s;
     content: "more info";
@@ -350,7 +351,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 5rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .speaker__header {
     grid-template-columns: 1fr;
   }
@@ -372,7 +373,7 @@ section {
   grid-row: 1/3;
   display: grid;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .speaker__photo {
     grid-column: 1/-1;
     border-radius: 0px;
@@ -468,7 +469,7 @@ section {
   padding-bottom: 1.5rem;
   border-radius: 0.4rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .card--active {
     box-shadow: none;
     padding: 1rem;
@@ -493,14 +494,14 @@ section {
 .card--active .speaker__main {
   align-content: start;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .card--active .speaker__main {
     min-height: 10rem;
     grid-template: auto auto 1fr auto/1fr 1fr;
     align-self: end;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .card--active .speaker__footer {
     order: 3;
   }
@@ -531,7 +532,7 @@ section {
 .card--active .speaker__location {
   display: none;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .card--active .speaker__photo,
   .card--active .speaker__location {
     display: none;
@@ -570,7 +571,7 @@ section {
   margin-top: 20px;
   align-items: center;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .card--active .speaker__main_txt {
     width: 9rem;
   }
@@ -585,7 +586,7 @@ section {
 .card--active .speaker__photo {
   display: none !important;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .card--active .speaker__footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -758,12 +759,16 @@ section {
 }
 
 .footer-page {
-  background-color: black;
+  background-color: #353237;
   color: #f9f9f9;
   padding: 2rem;
   padding-top: 7rem;
+  /* Styles de base pour mobiles : s'appliquent lorsque aucune media query ne correspond */
+  /* Media query pour tablettes */
+  /* Media query pour desktop */
+  /* mais pourquoi donc  chaque élément enfant  ne prend pas la propriété grid-area correctement !!!! grrr */
 }
-.footer-page__titre {
+.footer-page__header-titre {
   font-family: "museo500";
   font-weight: 600;
   color: rgb(75, 232, 210);
@@ -785,16 +790,22 @@ section {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.footer-page__icon {
+  padding-right: 1rem;
+  height: fit-content;
+  padding-top: 2px;
+  align-items: center;
+}
 .footer-page__image {
   display: none;
 }
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   .footer-page__image {
     display: block;
     grid-column: 4/-1;
   }
 }
-.footer-page__description {
+.footer-page__header-txt {
   color: #f9f9f9;
   margin-top: 2rem;
   font-family: "maven";
@@ -805,16 +816,43 @@ section {
   letter-spacing: -0.01819rem;
 }
 .footer-page__logos {
-  display: grid;
-  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
   justify-content: center;
   align-content: center;
   padding-bottom: 2rem;
-  border-bottom: 1px solid grey;
 }
 .footer-page__logos picture {
   display: flex;
   gap: 3rem;
+}
+.footer-page__help {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: #f9f9f9;
+  margin-right: 3rem;
+  width: fit-content;
+  font-family: "maven";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: -0.01819rem;
+}
+.footer-page__help-support {
+  color: rgb(219, 201, 183);
+  display: block;
+}
+.footer-page__follow {
+  border: 1px solid rgba(153, 153, 153, 0.6);
+  border-radius: 5px;
+  padding: 2rem;
+  margin: -2rem;
 }
 .footer-page__follow-titre {
   padding-top: 1rem;
@@ -829,7 +867,6 @@ section {
   border-top: 1px solid 8;
   padding-bottom: 1rem;
   padding-top: 0.5rem;
-  border-bottom: 1px solid grey;
 }
 .footer-page a {
   text-decoration: none;
@@ -844,7 +881,13 @@ section {
   align-items: center;
 }
 .footer-page__copyright {
+  margin-top: 3rem;
   color: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  justify-content: start;
   font-family: "museo300";
   font-size: 1.0625rem;
   font-style: normal;
@@ -852,39 +895,50 @@ section {
   line-height: normal;
   letter-spacing: -0.02056rem;
 }
-.footer-page__copyright-infos {
+.footer-page__copy22 {
   color: rgb(219, 201, 183);
 }
+.footer-page .footer-page {
+  display: grid;
+  grid-template-columns: 1fr; /* Tout empiler en une seule colonne pour les mobiles */
+  grid-template-rows: auto; /* La hauteur s'adapte au contenu */
+  grid-template-areas: "hea1" "log1" "hel1" "foll" "cop1";
+}
+@media (min-width: 768px) {
+  .footer-page { /* Point de rupture pour tablettes */ }
+  .footer-page .footer-page {
+    grid-template-columns: 1fr 1fr 1fr; /* Deux colonnes pour les tablettes */
+    grid-template-rows: repeat(3, auto); /* Trois rangées avec hauteur auto */
+    grid-template-areas: "hea1 hea1 hel1" "log1 log2 log2" "foll foll cop1";
+  }
+}
 @media (min-width: 1024px) {
-  .footer-page {
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "hea1 hel1" "hea2 hel2" "log1 log2" "foll cop1";
+  .footer-page { /* Point de rupture pour ordinateurs de bureau */ }
+  .footer-page .footer-page {
+    grid-template-columns: 3fr 2fr; /* version dsktop>> trois colonnes*/
+    grid-template-rows: repeat(4, auto); /* Quatre rangées avec hauteur auto */
+    grid-template-areas: "hea1 hea1 hel1" "hea1 hea1 hel2" "log1 log2 log2" "foll foll cop1";
   }
-  .footer-page .footer-page__header {
-    grid-area: hea1;
+  .footer-page__image {
+    display: block;
+    grid-area: hel1;
   }
-  .footer-page .footer-page__description {
-    grid-area: hea2;
-  }
-  .footer-page .footer-page__description-help {
-    grid-area: hel2;
-  }
-  .footer-page .footer-page__logo1 {
-    grid-area: log1;
-  }
-  .footer-page .footer-page__logo2 {
-    grid-area: log2;
-  }
-  .footer-page .footer-page__follow-us {
-    grid-area: foll;
-    border: 1px solid white;
-  }
-  .footer-page .footer-page__copyright {
-    grid-area: cop1;
-  }
-  .footer-page .footer-page__image {
-    display: none;
-  }
+}
+.footer-page .footer-page__header {
+  grid-area: hea1;
+}
+.footer-page .footer-page__help {
+  grid-area: hel2;
+}
+.footer-page .footer-page__logo1 {
+  grid-area: log1;
+}
+.footer-page .footer-page__logo2 {
+  grid-area: log2;
+}
+.footer-page .footer-page__follow {
+  grid-area: foll;
+}
+.footer-page .footer-page__copyright {
+  grid-area: cop1;
 }/*# sourceMappingURL=style.css.map */

@@ -1,19 +1,20 @@
 .footer-page {
 
-  background-color: black;
+  background-color: $color_background_footer;
   color: $body_color;
   padding: 2rem;
   padding-top: 7rem;
 
-  
 
 
-  &__titre {
+
+  &__header-titre {
     font-family: 'museo500';
     font-weight: 600;
     color: rgba(75, 232, 210, 1);
 
   }
+
 
   &__adresse {
     color: $body_color;
@@ -33,16 +34,23 @@
     padding-right: 1rem;
   }
 
+  &__icon {
+    padding-right: 1rem;
+    height: fit-content;
+    padding-top: 2px;
+    align-items: center;
+  }
+
   &__image {
     display: none;
 
-    @media (min-width:$breakpoint_mobile) {
+    @media (min-width:$breakpoint_tablet) {
       display: block;
       grid-column: 4/-1;
     }
-  }
+   }
 
-  &__description {
+  &__header-txt {
     color: $body_color;
     margin-top: 2rem;
     font-family: 'maven';
@@ -55,13 +63,17 @@
   }
 
   &__logos {
-    //display: flex;
-    display: grid;
-    gap: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    //padding-left: 5rem;
+    //padding-right: 5rem;
+
+    //display: grid;
+    gap: 1.8rem;
     justify-content: center;
     align-content: center;
     padding-bottom: 2rem;
-    border-bottom: 1px solid grey;
+    //border-bottom: 1px solid grey;
 
     //border: 1px solid white;
     picture {
@@ -69,6 +81,52 @@
       gap: 3rem;
     }
 
+  }
+
+  &__help {
+    display: flex;
+    // grid-template-columns: repeat(2, 1fr);
+    // justify-content: start;
+    // justify-items: start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 1rem;
+    margin-top: 2rem;
+    color: $body_color;
+    margin-right: 3rem;
+    //display: block;
+
+    width: fit-content;
+    font-family: 'maven';
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25rem;
+    letter-spacing: -0.01819rem;
+
+  }
+
+  
+  
+  &__help-support{
+    color: $copyright;
+    display: block;
+    //margin-left: 3rem;
+    //padding-left: 1rem;
+    
+  }
+
+  &__follow{
+    border: 1px solid #9999;
+    border-radius: 5px;
+    padding: 2rem;
+    //padding-right: 5rem;
+    margin: -2rem;
+
+    //padding: 0;
+    //width: max-content;
+    //background-color: #fff;
   }
 
   &__follow-titre {
@@ -86,7 +144,7 @@
     border-top: 1px solid 0008;
     padding-bottom: 1rem;
     padding-top: .5rem;
-    border-bottom: 1px solid grey;
+    //border: 1px solid grey;
 
   }
 
@@ -106,7 +164,14 @@
   }
 
   &__copyright {
+    margin-top: 3rem;
     color: $body_color;
+    //display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  justify-content: space-around;
+  justify-content: start;
 
     font-family: 'museo300';
     font-size: 1.0625rem;
@@ -116,57 +181,134 @@
     letter-spacing: -0.02056rem;
 
   }
-  &__copyright-infos{
+
+  &__copy22 {
     color: $copyright;
-  
-  }
-
-  @media (min-width:$breakpoint_tablet) {
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    "hea1 hel1"
-    "hea2 hel2"
-    "log1 log2"
-    "foll cop1"
-    ; 
-
-
-   .footer-page{
-
-    &__header{
-      grid-area: hea1;
-     }
-    &__description{
-      grid-area:hea2;
-    }
-    &__description-help{
-      grid-area: hel2;
-     }
-     &__logo1{
-      grid-area: log1;
-     }
-     &__logo2{
-      grid-area: log2;
-     }
-     &__follow-us{
-      grid-area: foll;
-      border: 1px solid white;
-     }
-     &__copyright{
-      grid-area: cop1;
-     }
-     &__image{
-      display: none;
-     }
-
-   }
-   
-  
-
-
 
   }
+
+//  @media (min-width:$breakpoint_mobile) {
+//     display: grid;
+//     grid-template-columns: 3fr 1fr;
+//     grid-template-rows: repeat(4, 1fr);
+//     grid-template-areas:
+//       "hea1 hea1 hel1"
+//       "hea1 hea1 hel2"
+//       "log1 log2 log2"
+//       "foll foll cop1"
+//     ;
+
+
+//     .footer-page {
+
+//       &__header {
+//         grid-area: hea1;
+//       }
+
+     
+
+//       &__help {
+//         grid-area: hel2;
+//         display: inline-block;
+//       }
+
+//       &__logo1 {
+//         grid-area: log1;
+//       }
+
+//       &__logo2 {
+//         grid-area: log2;
+       
+//       }
+
+//       &__follow {
+//         grid-area: foll;
+       
+//       }
+
+//       &__copyright {
+//         grid-area: cop1;
+//       }
+
+//       &__image {
+//         display: none;
+//       }
+ 
+//     }
+
+
+
+
+
+//   }
+
+// on jette on recommence parce que ca bug 
+/* Styles de base pour mobiles : s'appliquent lorsque aucune media query ne correspond */
+.footer-page {
+  display: grid;
+  grid-template-columns: 1fr; /* Tout empiler en une seule colonne pour les mobiles */
+  grid-template-rows: auto; /* La hauteur s'adapte au contenu */
+  grid-template-areas:
+    "hea1"
+    "log1"
+    "hel1"
+    "foll"
+    "cop1";
+}
+
+/* Media query pour tablettes */
+@media (min-width: $breakpoint_mobile) { /* Point de rupture pour tablettes */
+  .footer-page {
+    grid-template-columns: 1fr 1fr 1fr; /* Deux colonnes pour les tablettes */
+    grid-template-rows: repeat(3, auto); /* Trois rangées avec hauteur auto */
+    grid-template-areas:
+      "hea1 hea1 hel1"
+      "log1 log2 log2"
+      "foll foll cop1";
+  }
+}
+
+/* Media query pour desktop */
+@media (min-width: $breakpoint_tablet) { /* Point de rupture pour ordinateurs de bureau */
+  .footer-page {
+    grid-template-columns: 3fr 2fr; /* version dsktop>> trois colonnes*/
+    grid-template-rows: repeat(4, auto); /* Quatre rangées avec hauteur auto */
+    grid-template-areas:
+      "hea1 hea1 hel1"
+      "hea1 hea1 hel2"
+      "log1 log2 log2"
+      "foll foll cop1";
+  }
+  &__image {
+    display: block; // Affiche l'image sur le desktop
+    grid-area: hel1; 
+    // Utilisez votre gradient et image ici
+  }
+}
+
+/* mais pourquoi donc  chaque élément enfant  ne prend pas la propriété grid-area correctement !!!! grrr */
+.footer-page__header {
+  grid-area: hea1;
+ 
+}
+
+.footer-page__help {
+  grid-area: hel2; 
+}
+
+.footer-page__logo1 {
+  grid-area: log1;
+}
+.footer-page__logo2 {
+  grid-area: log2;
+}
+
+.footer-page__follow {
+  grid-area: foll;
+}
+
+.footer-page__copyright {
+  grid-area: cop1;
+}
 
 }
