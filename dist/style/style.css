@@ -178,6 +178,8 @@ section {
 }
 
 .hero {
+  width: 100vw;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3fr);
   justify-content: space-between;
@@ -212,6 +214,7 @@ section {
   display: flex;
   justify-content: space-between;
   width: 100vw;
+  overflow: hidden;
 }
 .hero__pattern-left {
   background-image: url(/dist/assets/images/elts/pattern-stripes-left.png);
@@ -224,6 +227,11 @@ section {
   background-size: cover;
   height: 2.5rem;
   width: 40%;
+}
+
+.all_speakers {
+  display: flex;
+  justify-content: center;
 }
 
 .speakers {
@@ -678,11 +686,11 @@ section {
   color: #353237;
 }
 .form-speaker__submit {
-  display: grid;
   width: 20rem;
   height: 3rem;
   text-align: center;
   align-content: center;
+  justify-content: center;
   justify-items: stretch;
   justify-content: center;
   color: rgb(247, 77, 28);
@@ -929,6 +937,7 @@ section {
 }
 .footer-page .footer-page__help {
   grid-area: hel2;
+  align-items: center;
 }
 .footer-page .footer-page__logo1 {
   grid-area: log1;

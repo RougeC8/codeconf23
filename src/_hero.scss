@@ -3,6 +3,8 @@
 
 
 .hero {
+  width: 100vw;
+  overflow: hidden;
   //border: 10px solid #000;
   display: grid;
   grid-template-columns: repeat(3fr);
@@ -44,6 +46,7 @@
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    overflow: hidden;
     //border: 1px solid #000;
   }
 

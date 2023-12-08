@@ -1,6 +1,13 @@
 /// SPEAKERS
 //
 // speaker c'est la div qui englobe tout!! speaker__fil-arine et speakers__all
+
+.all_speakers{
+  display: flex;
+  justify-content: center;
+  //background-color: red;
+}
+
 .speakers {
   background-color: $body_color;
   //background-color: #F74D1C;

@@ -91,12 +91,13 @@
 
 
   &__submit {
-    display: grid;
+    //display: grid;
     //margin-left: auto;
     width: 20rem;
     height: 3rem;
     text-align: center;
     align-content: center;
+    justify-content: center;
     justify-items: stretch;
 
     justify-content: center;
